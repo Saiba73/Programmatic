@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoceme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: #141146;
+            line-height: 1.6;
+            /*padding-top: 70px; /* Espacio para la barra sticky */
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #141146;
+            color: #4BC1BE;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+            font-size: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #4BC1BE;
+        }
+        
+        .logo {
+            /* font-size: 1.5rem;
+            font-weight: bold; */
+            
+        }
+
+        .logo img{
+          height: 100px;
+          width: auto;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h1, h2 {
+            color: #141146;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #eee;
+            margin: 2rem 0;
+        }
+        
+        /* .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            width: 40px;
+            height: 40px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+        } */
+        
+        .contact-btn {
+            display: block;
+            width: 200px;
+            margin: 2rem auto;
+            padding: 10px;
+            background-color: #4BC1BE;
+            color: #141146;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #imagen_Doble{
+          height: 300px;
+          width: 80%;
+          margin-left: 10%;
+          display: flex;
+        }
+
+        #imagen_1{
+          flex: 1;
+          height: 100%;
+          
+        }
+        
+        #imagen_2{
+          flex: 1;
+          height: 100%;
+          
+        }
+
+        #imagen_Sola{
+          height: 300px;
+          width: 60%;
+          margin-left: 22%;
+          
+        }
+
+        .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
+
+.carousel-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.carousel-text {
+    flex: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4BC1BE;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href=""><img src="img/titulo_transparente_vector.svg" alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Conoceme</a></li>
+                <li><a href="trabajos.html">Trabajos</a></li>
+                <li><a href="contacto.html">Contactame</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h1>¿Quién Soy?</h1>
+            <p style="font-size: 25px;"> Soy un joven diseñador y desarrollador de experiencias digitales. Tengo una gran pasion para la programacion y diseño de todo lo digital.  </p>
+            <div id="imagen_Doble">
+              <div id="imagen_1" style="border-width: 2px; border-style: solid;">
+                <img src="https://www.ucatalunya.edu.co/img/blog/los-mejores-lenguajes-de-programacion-en-el-desarrollo-web-y-su-importancia-en-la-era-digital.jpg" alt="imagen_1" style="width: 100%; height: 100%;">
+              </div>
+              <div id="imagen_2" style="border-width: 2px; border-style: solid;">
+                <img src="https://www.vbote.com/dam/jcr:fc08a932-db63-49e3-830e-ccee12e2fb79/digital-customer-experience-DCX.png" alt="imagen_2" style="width: 100%; height: 100%;">
+              </div>
+            </div>
+          </section>
+        
+        <hr>
+        
+        <section>
+            <h2>Misión</h2>
+            <p style="font-size: 25px;"> Soy un desarrollador web que provee un servicio de desarrollo full stack a sus clientes. Proporcionando un servicio personalizado y resultados creativos e interactivos. </p>
+            <div id="imagen_Sola">
+                <img src="https://chpeti20182916533.home.blog/wp-content/uploads/2019/03/mision.png" alt="imgane_mision" style="height: 100%;">
+            </div>
+          </section>
+        
+        <hr>
+        
+        <section>
+            <h2>Visión</h2>
+            <p style="font-size: 25px;"> Aspiro ser un desarrollador reconocido que pueda proporcionar un gran diseño y interactividad en aplicaciones 3d que operen en la web. </p>
+            <div id="imagen_Doble">
+              <div id="imagen_1" style="border-width: 2px; border-style: solid;">
+                <img src="https://fundhemi.org/wp-content/uploads/2019/03/vision.jpg" alt="imagen_1" style="width: 100%; height: 100%;">
+              </div>
+              <div id="imagen_2" style="border-width: 2px; border-style: solid;">
+                <img src="https://cdn-icons-png.flaticon.com/512/2421/2421304.png" alt="imagen_2" style=" height: 100%; margin-left: 15%;">
+              </div>
+            </div>
+          </section>
+        
+        <hr>
+        
+        <section>
+          <h2>Los Clientes Dicen...</h2>
+          <div class="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="https://www.georgetown.edu/wp-content/uploads/2022/02/Jkramerheadshot-scaled-e1645036825432-1050x1050-c-default.jpg" alt="Cliente 1">
+                      <div class="carousel-text">
+                          <p>"Excelente servicio, muy profesional y atento a los detalles. ¡Lo recomiendo totalmente!"</p>
+                          <strong>- Maria</strong>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <img src="https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg" alt="Cliente 2">
+                      <div class="carousel-text">
+                          <p>"Una experiencia increíble de principio a fin. Superó mis expectativas."</p>
+                          <strong>- Carlos</strong>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <img src="https://img.freepik.com/foto-gratis/estudiante-feliz-peinado-afro-muestra-dientes-blancos-estando-buen-humor-despues-clases_273609-16608.jpg?semt=ais_hybrid&w=740" alt="Cliente 3">
+                      <div class="carousel-text">
+                          <p>"Su trabajo habla por sí mismo. Lo contrataría una y otra vez."</p>
+                          <strong>- Manuel</strong>
+                      </div>
+                  </div>
+              </div>
+              <button class="carousel-btn prev">&#10094;</button>
+              <button class="carousel-btn next">&#10095;</button>
+          </div>
+      </section>
+        
+        <!-- <div class="social-links">
+            <a href="#">FB</a>
+            <a href="#">TW</a>
+            <a href="#">IG</a>
+            <a href="#">LI</a>
+        </div> -->
+        
+        <a href="contacto.html" class="contact-btn">Contactame</a>
+    </main>
+
+    <script>
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      const carouselInner = document.querySelector('.carousel-inner');
+      const items = document.querySelectorAll('.carousel-item');
+      let index = 0;
+  
+      function updateCarousel() {
+          const offset = -index * 100;
+          carouselInner.style.transform = `translateX(${offset}%)`;
+      }
+  
+      nextBtn.addEventListener('click', () => {
+          index = (index + 1) % items.length;
+          updateCarousel();
+      });
+  
+      prevBtn.addEventListener('click', () => {
+          index = (index - 1 + items.length) % items.length;
+          updateCarousel();
+      });
+  </script>
+  
+</body>
+</html>

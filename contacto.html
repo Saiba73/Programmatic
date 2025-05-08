@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactame</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: #141146;
+            line-height: 1.6;
+            /*padding-top: 70px; /* Espacio para la barra sticky */
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #141146;
+            color: #4BC1BE;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+            font-size: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #4BC1BE;
+        }
+        
+        .logo {
+            /* font-size: 1.5rem;
+            font-weight: bold; */
+        }
+
+        .logo img{
+          height: 100px;
+          width: auto;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 500px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+        
+        h1, h2 {
+            color: #141146;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-item h3 {
+            margin-bottom: 0.5rem;
+            color: #141146;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: #3498db;
+            color: #141146;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #141146;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #4BC1BE;
+            color: #141146;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .radio-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        margin-right: 80%;
+    }
+
+    .radio-option input[type="radio"] {
+        margin-right: 0px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href=""><img src="img/titulo_transparente_vector.svg" alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Conoceme</a></li>
+                <li><a href="trabajos.html">Trabajos</a></li>
+                <li><a href="contacto.html">Contactame</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Contactame</h1>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                
+                <div class="info-item">
+                    <h3>Redes Sociales</h3>
+                    <div class="social-links">
+                        <!-- <a href="#">FB</a> -->
+                        <a href="https://x.com/Programatic7920"><img src="https://images.freeimages.com/image/large-previews/f35/x-twitter-logo-on-black-circle-5694247.png" alt="X_Logo" style="width: 100%; height: 100%;"></a>
+                        <a href="https://www.instagram.com/programatic63/"><img src="https://img.freepik.com/vector-gratis/instagram-nuevo-icono_1057-2227.jpg" alt="insta_image" style="width: 100%; height: 100%;"></a>
+                        <!-- <a href="#">LI</a> -->
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Mi Correo</h3>
+                    <p>jesus.herreradelgadillo.30350@gmail.com</p>
+                </div>
+                
+                <p>Formulario para mandar un mensaje por medio de un correo electrónico</p>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Envíame un Mensaje</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Su Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="email">Su Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label>¿Qué tipo de proyecto estás buscando?</label>
+                        <div class="radio-option">
+                            <input type="radio" id="game" name="projectType" value="game" required>
+                            <label for="game">Desarrollo de Videojuegos</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="web" name="projectType" value="web">
+                            <label for="web">Desarrollo Web</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="app" name="projectType" value="app">
+                            <label for="app">Desarrollo de Apps</label>
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="message">Deje su mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                
+                    <button type="submit" class="submit-btn">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aquí puedes agregar código para enviar el formulario
+            alert('Mensaje enviado con éxito. ¡Gracias por contactarme!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/canvas.css">
+    <title>Canvas</title>
+</head>
+<body>
+    <nav>
+        <a href="/trabajos.html"> Volver </a>
+    </nav>
+    <div class="contenedor">
+        <canvas class="canvas" droppable="true" id="canvas" width="800" height="600"
+            onclick="DibujarFigura(event)"
+            onmousedown="alHacerClick(event)"
+            onmousemove="move(event)"
+            onmouseup="alSoltarClick(event)"
+            onmouseleave="leave()">
+        </canvas>
+        
+        <div class="barra-herramientas">
+
+            <div class="contenedor-imagnes-prev">
+                <!-- <div id="imagen-prev" draggable="true"  class="imagen-prev">
+                    <input type="file" name="selecionar-imagen" id="selecionar-imagen">
+                    <label for="selecionar-imagen">
+                        <div></div>
+                    </label>
+                </div> -->
+                <div id="sticker-prev"  draggable="true" class="imagen-prev">
+                    <input type="file" name="seleccionar-sticker" id="seleccionar-sticker" onchange="cargarImagen(event)">
+                    <label for="seleccionar-sticker">
+                        <div>Subir Imagen</div>
+                    </label>
+                    </label>
+                </div>
+            </div>
+            
+            <!--input type="file" name="" id=""-->
+            <div>
+                <div class="barra-rango"><p>Tamaño</p>
+                    <input type="range" name="" id="rango-imagen" min="10" max="100">
+                    <p>Brillo</p>
+                    <input type="range" name="" id="rango-brillo" min="50" max="200" value="100" onchange="Filtros('brillo')">
+                    <p>Opacidad</p>
+                    <input type="range" name="" id="rango-opacidad" min="1" max="255" value="255" onchange="Filtros('opacidad')">
+                </div>
+            </div>
+
+            <div class="contenedor-botones">
+                <input class="btn-cambio" type="button" value="Pincel" onclick="SeleccionarOpcion('pincel')">
+                <input class="btn-cambio" type="button" value="Cuadro" onclick="SeleccionarOpcion('cuadrado')">
+                <input class="btn-cambio" type="button" value="Circulo" onclick="SeleccionarOpcion('cirulo')">
+                <input class="btn-cambio" type="button" value="Sticker" onclick="SeleccionarOpcion('imagen')">
+                <input class="btn-cambio" type="button" value="Linea" onclick="SeleccionarOpcion('linea')">
+                <input class="btn-cambio" type="button" value="Borrador" onclick="SeleccionarOpcion('borrador')">
+                <input class="btn-cambio" type="button" value="&#60;" onclick="deshacerCambio()">
+                <input class="btn-cambio" type="button" value="&#62;" onclick="rehacerCambio()">
+                <input class="btn-cambio" type="button" value="Triangulo" onclick="SeleccionarOpcion('triangulo')">
+                <input class="btn-cambio" type="button" value="Filtro Rojo" onclick="Filtros('rojo')">
+                <input class="btn-cambio" type="button" value="Filtro Azul" onclick="Filtros('azul')">
+                <input class="btn-cambio" type="button" value="Filtro Verde" onclick="Filtros('verde')">
+                <input class="btn-cambio" type="button" value="Filtro Negativo" onclick="Filtros('negativo')">
+                <input class="btn-cambio" type="button" value="Filtro Sepia" onclick="Filtros('sepia')">
+                <input class="btn-cambio" type="button" value="Filtro B&N" onclick="Filtros('blancoYnegro')">
+                <input class="btn-cambio" type="button" value="SMART" onclick="SeleccionarOpcion('SMART')">
+            </div>
+            <div class="contenedor-grupo-seleccionar-color">
+                <div class="contenedor-seleccionar-color">
+                    <label for="Linea">Linea</label>
+                    <input class="seleccionar-color" type="color" name="Linea" id="seleccionar-color-linea" value="#000000">
+                </div>
+                
+                <div class="contenedor-seleccionar-color">
+                    <label for="Relleno">Relleno</label>
+                    <input class="seleccionar-color" type="color" name="Relleno" id="seleccionar-color-relleno" value="#000000">
+                </div>
+                
+                
+            </div>
+            <div class="contenedor-botones">
+                <input type="text" id="nombre-archivo" class="btn-cambio" placeholder="Nombre del archivo">
+                <select id="tipo-archivo" class="btn-cambio">
+                    <option value="jpg">.jpg</option>
+                    <option value="png">.png</option>
+                </select>
+                <input class="btn-cambio" id="BotonGuardar" type="button" value="Guardar Img" onclick="guardarImagen()">
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/recursos.js"></script>
+<script src="js/filtros.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/Guardado.js"></script>
+</html>
