@@ -134,6 +134,15 @@
         }
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TYQTWXGFYT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TYQTWXGFYT');
+</script>
 <body>
     <header>
         <div class="logo"><a href=""><img src="img/titulo_transparente_vector.svg" alt="logo"></a></div>
@@ -186,8 +195,27 @@
                 ¡del 11-20 mayo 30% de descuento!
             </p>
         </section>
+
+        <div id="cookie-consent" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #141146; color: white; padding: 1rem; text-align: center; z-index: 9999;">
+    Este sitio usa cookies para mejorar tu experiencia.
+    <button id="accept-cookies" style="margin-left: 1rem; background-color: #4BC1BE; color: #141146; border: none; padding: 0.5rem 1rem; cursor: pointer; font-weight: bold;">Aceptar</button>
+</div>
         
         <a href="contacto.html" class="contact-btn">Contactame Ahora</a>
+        <footer style="text-align: center; padding: 1rem; background-color: #141146; color: white;">
+    <a href="politica_privacidad.html" style="color: #4BC1BE; text-decoration: none;">Política de Privacidad</a>
+</footer>
     </main>
+
+
+    <script>
+        document.getElementById("accept-cookies").addEventListener("click", function() {
+        document.getElementById("cookie-consent").style.display = "none";
+        console.log("Simulación: cookies aceptadas (no se guarda nada).");
+    });
+
+
+    
+    </script>
 </body>
 </html>
